@@ -35,7 +35,7 @@ while status == False:
     if menu == "1":
         status = login(listaUsuarios)
     elif menu == "2":
-        status = criarUsuario(listaUsuarios)
+        status = registro(listaUsuarios)
     elif menu == "3":
         print("TCHAI E TOME N EH VDD?? ")
         status = True
