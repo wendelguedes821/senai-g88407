@@ -1,7 +1,7 @@
 loginsSenhas = {
     "usuario1": "123451",
     "usuario2": "123452",
-    "usuario3": "123453",
+    "usuario3": "123453"
 }
 
 usuario = input("Digite seu usuário. ")
