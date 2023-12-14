@@ -11,7 +11,6 @@ def limparTerminal():
     
         os.system('clear')
 
-
 def Menu():
     print("""
     |=================================================|
@@ -52,8 +51,8 @@ def AddItem(lista):
 
     Menu()
     while True:
-        produto = input(
-            "Digite o número do pedido ou aperte 's' para voltar ao menu. ")
+        produto = input("Digite o número do pedido ou aperte 's' para voltar ao menu. ")
+      
         if produto.lower() == 's':
             break
         elif produto.isdigit() and int(produto) in range(1, 6):
@@ -82,7 +81,7 @@ def removerItem(lista):
                     "Digite o número do produto que deseja remover ou 's' para voltar ao menu. ")
                 if escolha.lower() == "s":
                     break
-                elif escolha.isdigit() and int(escolha) in range(1, len(lista)+ 1 ):
+                elif escolha.isdigit() and int(escolha) in range(1, len(lista) + 1):
                     itemRemovido = list(lista.keys())[int(escolha) - 1]
                     del lista[itemRemovido]
                     print("{} removido do pedido.".format(itemRemovido))
@@ -90,12 +89,11 @@ def removerItem(lista):
                     print("Opção inválida ou não há pedidos no pedido para remover.")
                     break
 
-
 def mostrasPedido(lista):
     while True:
         if lista:
             print(""" 
-|*******************************************4|
+|*******************************************|
 |           NOME                   PREÇO    |
 |*******************************************|""")
 
@@ -106,7 +104,7 @@ def mostrasPedido(lista):
         if escolha.lower() == 's':
             break
         else:
-            print("Opção inválida ou não há pedidos no pedido para remover.")
+            print("Opção inváLida ou não há pedidos no pedido para remover.")
 
 
 def calcularTotal(lista):
