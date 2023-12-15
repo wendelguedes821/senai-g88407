@@ -1,43 +1,60 @@
 
-conta = {
-    "12345": 1450.00
 
+conta = {
+    "saldo": 100,
+    "senha": "1234"
 }
 
-senha = input("Digite sua senha ")
-saldo = input("Digite seu saldo ")
-if senha and saldo in conta[senha] == saldo:
-    print("Login efetuado com sucesso!")
-else:
-    print("Login inválido")
+dado = conta["saldo"]
 
+def autenticar():
+    senha = (input("Digite sua senha \n"))
+    if senha in conta:
+        print("Login com sucesso\n"),
 
-def operacoesBasicas():
-    while True:
-        print("""
-
-    1 = Verificar Saldo
-    2 = Depositar Dinheiro
-    3 = Retirar Dinheiro
-
-    """)
-
+    else:
+        print("Login inválido\n")
+    return True
 
 def verificarSaldo():
-    operacoesBasicas()
-    while True:
-        print(saldo)
+    autenticar()
+    print(dado)
+
+def depositarDinheiro():
+    autenticar()
+    deposito = int(input("Digite o valor que deseja depositar \n"))
+    total = deposito + dado
+    print(total)
 
 
-def depositarValor():
-    operacoesBasicas()
-    deposito = input("Digite o valor que deseja depositar.")
-    depositado = deposito + saldo
-    print("Seu saldo agora é", depositado)
+def retirarDinheiro():
+    autenticar
+    saque = int (int("Digite o valor que deseja sacar \n"))
+    total = saque - dado
 
 
-def retirarValor():
-    operacoesBasicas()
-    saque = ("digite o valor que deseja sacar")
-    saque = saldo - saque
-    print(saque)
+def sair():
+    if sistema == "4":
+        return False
+
+
+run = True
+while run:
+    sistema = input("""
+    l===========================l
+    l 1 = Verificar Saldo       l  
+    l 2 = Depositar Dinheiro    l
+    l 3 = Retirar Dinheiro      l
+    l 4 = Sair                  l
+    l===========================l
+    """)
+    if sistema == "1":
+        verificarSaldo()
+    elif sistema == "2":
+        depositarDinheiro()
+    elif sistema == "3":
+        retirarDinheiro()
+    elif sistema == "4":
+        sair()
+    else:
+        run = False
